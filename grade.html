@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <meta name="author" content="Henrietha C.N.">
+  <link rel="stylesheet" type="text/css" href="w3.css">
+  <title> Exam/Test Grading</title>
+</head>
+
+<body>
+
+  <div id="div1" class="w3-card-4" style="width: 50%; margin-left: 25%; margin-top: 5%; height: 100%;">
+    <div class="w3-container w3-food-chocolate">
+      <h1 class="w3-center" style="font-size:50px; font-family: Lobster Sans-serif;"> Exam Record </h1>
+    </div>
+    <div class="w3-container w3-food-egg">
+      <div class="error text-center"></div>
+      <br>
+      <input type="text" class="w3-input w3-hover-sand" id="regnumber" placeholder="Registration Number" required><br>
+      <input type="text" class="w3-input w3-hover-sand" id="sname" placeholder="Student Name" required><br>
+      <input type="number" class="w3-input w3-hover-sand" id="testscore" placeholder="Test Score" required><br>
+      <input type="number" class="w3-input w3-hover-sand" id="examscore" placeholder="Exam Score" required><br>
+      <input type="hidden" value="" id="edit-data">
+      <button type="submit" class=" w3-deep-orange w3-hover-purple" id="inputt" onclick="collectData()">Collect
+        Data</button>
+    </div>
+
+    <div class="w3-container  w3-center w3-food-chocolate" style="font-family: Lobster sans-serif; font-size: 20px;">
+      <button class="w3-btn w3-deep-orange w3-hover-purple w3-right" id="ggrade" onclick="viewGrade()">Display
+        Grade</button>
+      <form id="formr">
+        <div id="table1" class="w3-container"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="table2"></div>
+
+  <script src="grade.js"></script>
+</body>
+
+</html>
