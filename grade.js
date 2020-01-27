@@ -17,9 +17,10 @@ function collectData() {
     testScore = testScore.trim()
     examScore = examScore.trim()
     let splitName = studentName.split(" ")
-    console.log(splitName)
     if (splitName.length !== 2) {
         return document.querySelector(".error").textContent = "First and Last Name Required"
+    } else {
+        document.querySelector(".error").textContent = " "
     }
 
     // check reg number
@@ -27,21 +28,7 @@ function collectData() {
     if (editData === "" && checkReg.length > 0) {
         return document.querySelector(".error").textContent = "Reg no already exist"
     }
-    if (editData !== "") {
-        let checkReg = schoolGrade.filter((e, i) => {
-            schoolGrade[i].testscore = testScore
-            schoolGrade[i].examscore = examScore
-            schoolGrade[i].totalscore = totalScore
-        })
-        let allInput = document.querySelectorAll('input')
-        allInput.forEach(e => {
-            e.value = ''
-        })
-        editData = ''
-        return
 
-    }
-    editData = ''
 
     let students = {
         regnumber: regNumber,
@@ -68,6 +55,25 @@ function collectData() {
             return regstn;
         }
     };
+
+
+    if (editData !== "") {
+        let checkReg = schoolGrade.filter((e, i) => {
+            schoolGrade[i].sname = studentName
+            schoolGrade[i].testscore = testScore
+            schoolGrade[i].examscore = examScore
+            schoolGrade[i].totalscore = totalScore
+            schoolGrade[i].grade = () => students.grade()
+        })
+        let allInput = document.querySelectorAll('input')
+        allInput.forEach(e => {
+            e.value = ''
+        })
+        editData = ''
+        return
+
+    }
+    editData = ''
 
     schoolGrade.push(students);
     let allInput = document.querySelectorAll('input')
