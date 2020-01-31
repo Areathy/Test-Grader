@@ -9,6 +9,13 @@
     margin-top: 1em !important;
 }
 
+.t2-body {
+    width: 98% !important;
+    margin: auto !important;
+    margin-top: 2em !important;
+}
+
+
 .error{
     color: red;
 }
