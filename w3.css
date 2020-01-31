@@ -2,6 +2,13 @@
 .text-center{
     text-align: center;
 }
+
+.t-body {
+    width: 90% !important;
+    margin: auto !important;
+    margin-top: 1em !important;
+}
+
 .error{
     color: red;
 }
